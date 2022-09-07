@@ -1,0 +1,101 @@
+<!DOCTYPE html> 
+<!-- Så här skriver du dina kommantare efter varje rad eller stycke -->
+<html lang="sv"><!--Dokumentets språk är valt till svenska.-->
+<head>
+  <meta charset="utf-8">
+  <title>Exempel 1</title> <!--Dokumentets titel som visas i webbläsaren.-->
+</head>
+<!--Nedanför är sektionen för CSS-inline styling-->
+<style>
+    h1{
+        text-align:center; /*Texten i h1 kommer centreras*/  
+        font-size:300%;   /*Font-storlek blir 300% större än standard*/
+    }
+    
+    #myHeader { /*Kod under id:t myHeader stylas här*/
+  background-color: lightblue; /*Bakgrundsfärg*/
+  color: black; /*Textfärg*/
+  padding: 40px; /*Mellanrum till kanterna*/
+  text-align: left; /*Texten placeras åt vänster.*/
+
+    }
+    table /*Styling för tabellen*/
+    {
+  font-family: arial, sans-serif; /*Fonten som väljs, har inte användaren arial på sin dator så visas ett annat typsnitt enligt sans-serif*/
+  border-collapse: collapse; /*Hur bordern ska se ut som standard "2" streck eller nu med collapse endast 1 streck mellan cellerna*/
+  width: 100%; /*Bredden täcker hela sidan.*/
+    }
+
+td, th 
+    {
+  border: 1px solid #dddddd; /*En 1px bred grå solid border*/
+  text-align: left; /*Texten placeras åt vänster i tabellen*/
+  padding: 8px; /*Vita utrymmet mellan kanterna och texten.*/
+    }
+
+tr:nth-child(even) /*Gör att varje jämn rad i tabellen får en grå bakgrundsfärg*/ {
+  background-color: #dddddd;
+}
+</style>
+<body>
+
+ <!--Rubriker finns från <h1> som är den viktigaste/största rubriken till <h6> som är den minsta/minst viktiga.-->
+  <h1>Att kommentera koden</h1> 
+  <h2>Du ska i denna uppgift kommentera koden till denna sidan.</h2>
+  <h3>Det är viktigt att du är tydlig i din beskrivning så det är lätt för alla att förstå vad du menar.</h3>
+ 
+  <!--<p> används för att skriva sina textstycken i.>-->
+  <p>Det är viktigt att vara kommunikativ så slipper vi en massa missförstånd.<br> <!--<br> ger en radbrytning-->
+  Det här är <strong>lite mer text</strong> på en ny rad.</p> <!--Strong ger fetstil, och understryker att ordet är mer betydelsefullt/ska betonas -->
+ 
+  <p id="myHeader">Ibland vill man dela upp texten för att den ska bli lättare att läsa och kanske förstarka vissa saker som är viktiga!</p><br>
+  <p>För att underlätta för läsare kan det vara bra att dela upp information:</p> 
+  <!--Genom id kan man i CSS välja att stylingen endast påverkar det elementet som innefattar av id:t-->
+ 
+  <ol> <!--Ordnad lista. Blir en numrerad lista-->
+    <li>Första - det är viktigt att vi tänker på vem som ska ha användning för vår sida när vi skriver den.</li> 
+    <li>Andra - så är användningen av olika färger viktigt för att användaren tydligt ska se det den behöver.</li>
+    <li>Tredje - ger vi förmycket information på en gång kan det bli svårt att hitta den info man söker.</li>
+    <!--<li> är listans olika "punkter"-->
+  </ol>
+ 
+  <ul> <!--Ej ordnad lista, Visar punkter framför listans innehåll.-->
+    <lh><h2>Bra länkar</h2></lh>
+    <!--Länkar skrivs som nedan-->
+    <li><a href="https://validator.w3.org/">Validering av kod.<!--Här är texten som syns när man klickar på länken.--></a> När vi programmerat html så kan vi gå in på w3Cs hemsida och validera den så vi inte gjort några missar.</li>
+    <li><a href="https://www.arkitektkopia.se/akademi/stark-budskapet-med-komplementfarger/">Komplementfärger</a> hjälper oss så att det vi vill ha fram blir tydligare.</li>
+  </ul>
+ 
+  <table> <!--En tabell-->
+    <tr> <!--Tabellrad-->
+      <th>Andra sätt att dela upp information</th> <!--Tabellens header skrivs inom <th>-->
+      <th>För att det ska bli lättare att hitta</th>
+    </tr>
+    <tr>
+      <td>data1</td> <!--En cell inom tabellen-->
+      <td>data2</td>
+    </tr>
+    <tr>
+      <td>data3</td>
+      <td>data4</td>
+    </tr>
+  </table>
+ 
+ <!--Bildlänkar kan antingen vara en bild sparad lokalt på datorn (tradgard1.jfif) eller en länk till bildens adress
+på en sida där den är publicerad.-->
+  <img src="tradgard1.jfif" alt="trädgård" width="400"> <!--Alt visar en text om bilden inte kan laddas eller om användaren använder syntolkning.-->
+  <img src="https://kampanj.expressen.se/ikea/wp-content/uploads/2021/12/v1.jpg" alt="sovrum" width="250"> <!--Width = bildens bredd.-->
+ 
+  <!--Koden som används för att göra ett formulär:-->
+  <form>
+    First name: <input type="text" name="fname"><br> <!--Input kan tex vara text eller siffor-->
+    Last name:<input type="text" name="lname"><br>
+    <select> <!--n möjlighet för användaren att göra olika val i formuläret-->
+      <option value="volvo">Volvo</Option>
+      <option value="saab">Saab</Option> <!--De olika valen i det här exemplet.-->
+    </select>  
+    <input type="submit" value="Knapp"> <!--Formuläret skickas till vald destination med knappen-->
+  </form>  
+<!-- Slut på sidan, så när du kommenterat alla delar hit så ska du lämna in din fil i Canvas! -->
+</body>
+</html>
